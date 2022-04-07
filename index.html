@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="grim-reaper.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>UMPP</title>
+  </head>
+  <body>
+    <div id="storage"><h1 id="storageLabel">Collection:</h1></div>
+    <div id="history">
+      <h1 id="historyLabel">History</h1>
+      <ul id="historyList" class="hisHolder"></ul>
+    </div>
+    <div class="music-container" id="music-container">
+      <div class="music-info">
+        <h4 id="title">Song</h4>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+
+      <audio src="music/costa.mp3" id="audio"></audio>
+
+      <div class="img-container">
+        <img src="images/costa.jpg" alt="music-cover" id="cover" />
+      </div>
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+        <i class="fas fa-volume-up" id="volIco"></i><input type="range" class="volume"></div>
+        <button id="addSong" class="action-btn please">
+          <i id="plusIco" class="fas fa-plus" ></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="addingPage"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

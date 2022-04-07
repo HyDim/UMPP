@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  background-image: linear-gradient(
+    0deg,
+    rgb(247, 247, 247) 23.8%,
+    rgb(252, 221, 221) 92%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.music-container {
+  background-color: rgb(252, 221, 221);
+  border-radius: 15px;
+  width: 100%;
+  display: flex;
+  padding: 20px 30px;
+  padding-top: 65px;
+  position: fixed;
+  margin: 0 0;
+  z-index: 10;
+  height: 16%;
+}
+
+.img-container {
+  width: 110px;
+  position: relative;
+}
+
+.img-container img {
+  width: inherit;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.action-btn {
+  background-color: #fff;
+  border: 0;
+  color: #dfdbdf;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.action-btn-big {
+  color: #cdc2d0;
+  font-size: 30px;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+.music-info {
+  background-color: rgb(252, 221, 221);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 145px;
+  width: calc(100% - 145px);
+  opacity: 1;
+  padding: 10px 10px 10px 10px;
+  transition: background-color 0.2s ease-in;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  background-color: #cdc2d0;
+}
+
+.music-info h4 {
+  margin: 0;
+}
+
+.progress-container {
+  background: rgb(218, 218, 218);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  background-color: #fe8daa;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+#storage {
+  background-color: brown;
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 81%;
+  width: 85vw;
+  border-radius: 15px;
+  padding: 10px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(110px, 1fr));
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.imgHolder {
+  width: 110px;
+  height: 110px;
+  position: relative;
+}
+
+#storedImg {
+  width: inherit;
+  height: 110px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.labels {
+  position: absolute;
+  top: 110px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(115, 130, 118, 1);
+}
+
+#history {
+  background-color: #738276;
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 81vh;
+
+  width: 12vw;
+  border-radius: 15px;
+  padding: 10px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-rows: 50px repeat(auto-fill, minmax(100px, 1fr));
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.hisHolder {
+  height: 110px;
+  position: relative;
+}
+
+#historyImg {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+#historyLabel {
+  text-align: center;
+  border: 2px black solid;
+  border-radius: 5px;
+
+  height: min-content;
+}
+
+#storageLabel {
+  border: 2px solid black;
+  border-radius: 5px;
+  grid-column: 1 / span 2;
+  text-align: center;
+  font-size: 42px;
+}
+
+.playButton {
+  position: absolute;
+  z-index: 1;
+  width: 50%;
+}
+
+#historyList {
+  list-style-type: none;
+  display: table;
+  margin: 0 auto;
+}
+
+#historyImg2 {
+  width: 110px;
+  height: 110px;
+  margin-top: 10px;
+  transform: translate(-25%, -25%);
+}
+
+#historyImg2:first-child {
+  width: 110px;
+  height: 110px;
+  margin-top: 40px;
+  transform: translate(-25%, -25%);
+}
+
+#volIco {
+  color: rgba(1, 1, 1, 0.7);
+  margin-right: 5px;
+}
+
+.volume {
+  color: rgba(1, 1, 1, 0.7);
+}
+
+#addSong {
+  background-color: #738276;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  top: 23%;
+  height: 64px;
+  color: rgb(0, 0, 0);
+  font-size: 42px;
+}
+
+#addSong:hover {
+  background-color: #6e8071;
+}
+
+#addSong:active {
+  background-color: #8ca390;
+}
+
+#addingPage {
+  position: absolute;
+  top: 0;
+  left: 25;
+  width: 50%;
+  height: 60%;
+  margin-top: 100px;
+  background-color: white;
+}
