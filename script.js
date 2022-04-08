@@ -15,6 +15,10 @@ const historyList = document.querySelector("#historyList");
 const volume = document.querySelector(".volume");
 const addSong = document.querySelector(".please");
 const addingPage = document.querySelector("#addingPage");
+const newSong = document.querySelector("#newSong");
+const songImg = document.querySelector("#songImg");
+const songFile = document.querySelector("#songFile");
+const addForm = document.querySelector("#addForm");
 
 const songs = [
   "costa",
@@ -131,6 +135,12 @@ function loadHistory() {
   }
 }
 
+function submitNewSong() {
+  songs.push(newSong.value);
+
+  storage.innerHTML += `<img src="` + +`"></img>`;
+}
+
 //function execution
 
 loadStorage();
@@ -203,3 +213,5 @@ volume.addEventListener("input", () => {
     alert("nay");
   }
 });*/
+
+addForm.addEventListener("submit", submitNewSong);

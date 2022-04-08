@@ -44,12 +44,22 @@
         </button>
         <i class="fas fa-volume-up" id="volIco"></i><input type="range" class="volume"></div>
         <button id="addSong" class="action-btn please">
-          <i id="plusIco" class="fas fa-plus" ></i>
-        </button>
+            <i id="plusIco" class="fas fa-plus"></i>
+          </button>
       </div>
     </div>
 
-    <div id="addingPage"></div>
+    <div id="addingPage">
+      <form id="addForm" >
+        <label for="newSong">song name:</label>
+        <input type="text" name="newSong" id="newSong">
+        <label for="songImg">song picture:</label>
+        <input type="file" name="songImg" id="songImg" accept="image/png">
+        <label for="songFile">song:</label>
+        <input type="file" name="songFile" id="songFile" accept="audio/mp3">
+        <input type="submit" value="Add Song">
+    </form>
+    </div>
 
     <script src="script.js"></script>
   </body>
