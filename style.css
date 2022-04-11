@@ -11,7 +11,7 @@ body {
   background-image: linear-gradient(
     0deg,
     rgb(247, 247, 247) 23.8%,
-    rgb(252, 221, 221) 92%
+    rgb(252, 221, 221) 40%
   );
   display: flex;
   flex-direction: column;
@@ -259,10 +259,54 @@ body {
 
 #addingPage {
   position: absolute;
+
   top: 0;
   left: 25;
   width: 50%;
   height: 60%;
   margin-top: 100px;
-  background-color: white;
+  border-radius: 5px;
+  border: 2px #303030 solid;
+  background-color: #808080;
+  padding: 20px;
+}
+
+#addForm {
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+#newSong {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  margin-bottom: 6%;
+}
+
+#songImg {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 6%;
+
+  font-size: 24px;
+}
+#songFile {
+  font-family: "Lato", sans-serif;
+  margin-bottom: 6%;
+
+  font-size: 24px;
+}
+
+#submitSong {
+  background-color: #738276;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 30px;
+  height: 64px;
+  color: rgb(0, 0, 0);
+  font-size: 42px;
 }
