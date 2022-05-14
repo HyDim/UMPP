@@ -73,6 +73,22 @@ body {
   outline: 0;
 }
 
+.action-btn:hover {
+  background-color: #c0bdc0;
+}
+
+.action-btn:active {
+  background-color: #666366;
+}
+
+.yes {
+  background-color: #6e8071;
+}
+
+.no {
+  background-color: red;
+}
+
 .music-info {
   background-color: rgb(252, 221, 221);
   border-radius: 15px 15px 0 0;

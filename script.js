@@ -19,6 +19,7 @@ const newSong = document.querySelector("#newSong");
 const songImg = document.querySelector("#songImg");
 const songFile = document.querySelector("#songFile");
 const addForm = document.querySelector("#addForm");
+const shuffle = document.querySelector("#shuffle");
 
 const songs = [
   "costa",
@@ -33,8 +34,6 @@ const songs = [
 ];
 
 let songIndex = 0;
-
-loadSong(songs[songIndex]);
 
 function loadSong(song) {
   title.innerText = song;
@@ -170,13 +169,13 @@ progressContainer.addEventListener("click", setProgress);
 
 audio.addEventListener("ended", nextSong);
 
-addSong.addEventListener("click", () => {
+/*addSong.addEventListener("click", () => {
   if (addingPage.style.display === "none") {
     addingPage.style.display = "block";
   } else {
     addingPage.style.display = "none";
   }
-});
+});*/
 
 document.addEventListener("keyup", (event) => {
   if (event.code === "Space") {
@@ -204,6 +203,8 @@ volume.addEventListener("input", () => {
   audio.volume = volume.value / 100;
 });
 
+//shuffle
+
 /*playButton.addEventListener("click", () => {
   const isPlaying = playButton.classList.contains("fa-play");
 
@@ -214,4 +215,4 @@ volume.addEventListener("input", () => {
   }
 });*/
 
-addForm.addEventListener("submit", submitNewSong);
+//addForm.addEventListener("submit", submitNewSong);
